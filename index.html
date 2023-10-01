@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATATÜRK</title>
+    <style>
+        * {
+            margin: 0;
+        }
+
+        .AP {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+        }
+
+        .calistir {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: gray;
+            z-index: 1;
+        }
+
+        .calistir:focus {
+            opacity: 0;
+        }
+
+
+    </style>
+</head>
+<body>
+    <button class="calistir" onclick="playAudio()"><img src="play.png" alt=""></button>
+
+    <audio src="ATAM.mp3" id="myAudio">
+        Tarayıcınız audio elementini desteklemiyor.
+    </audio>
+
+    <img class="AP" src="unnamed.jpg" alt="">
+
+
+
+    <script>
+    function playAudio() {
+        var audio = document.getElementById("myAudio");
+        audio.play();
+    }
+    </script>
+</body>
+</html>
