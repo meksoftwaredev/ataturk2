@@ -20,7 +20,7 @@
             transition: 1s all;
         }
 
-        .Calistir:hover {
+        .Calistir:focus {
             transform: translateX(-100%);
         }
 
@@ -30,7 +30,7 @@
 </head>
 <body>
 
-    <button onclick="playAudio()" class="Calistir"><img src="play.png" alt=""></button>
+    <button onclick="playAudio(), kaydir()" class="Calistir"><img src="play.png" alt=""></button>
 
     <audio src="ATAM.mp3" id="audio"></audio>
     
@@ -38,6 +38,11 @@
         function playAudio() {
             let audio = document.getElementById("audio");
             audio.play();
+        }
+
+        function kaydir() {
+            let kaydir = document.getElementsByClassName("Calistir");
+            kaydir.style.left="-100%";
         }
     </script>
 </body>
