@@ -9,45 +9,36 @@
             margin: 0;
         }
 
-        .AP {
-            position: fixed;
-            width: 100%;
-            height: 100%;
-        }
-
-        .calistir {
+        .Calistir {
             position: absolute;
+            top: 0;
+            left: 0;
             width: 100%;
             height: 100%;
+            opacity: 0.5;
             background-color: gray;
-            z-index: 1;
-            opacity: 1;
+            transition: 1s all;
         }
 
-        .calistir:focus {
-            opacity: 0;
-            display:none;
+        .Calistir:focus {
+            left: -100%;
         }
+
 
 
     </style>
 </head>
 <body>
-    <button class="calistir" onclick="playAudio()"><img src="play.png" alt=""></button>
 
-    <audio src="ATAM.mp3" id="myAudio">
-        Tarayıcınız audio elementini desteklemiyor.
-    </audio>
+    <button onclick="playAudio()" class="Calistir"><img src="play.png" alt=""></button>
 
-    <img class="AP" src="unnamed.jpg" alt="">
-
-
-
+    <audio src="ATAM.mp3" id="audio"></audio>
+    
     <script>
-    function playAudio() {
-        var audio = document.getElementById("myAudio");
-        audio.play();
-    }
+        function playAudio() {
+            let audio = document.getElementById("audio");
+            audio.play();
+        }
     </script>
 </body>
 </html>
